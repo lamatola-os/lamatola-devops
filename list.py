@@ -4,6 +4,7 @@ ec2 = boto3.resource('ec2')
 from pick import pick
 import base64
 import os
+import hashlib
 
 def get_name(instance):
     for tag in instance.tags:
