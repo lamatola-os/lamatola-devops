@@ -18,7 +18,7 @@ scrape_configs:
     # metrics_path defaults to '/metrics'
     # scheme defaults to 'http'.
     static_configs:
-    - targets: ['127.0.0.1:9090']
+    - targets: ['prometheus-container:9090']
 
 ## To access java app running on host from a container localhost, 127.0.0.1 won't work
 ## use ifconfig | grep inet
@@ -26,4 +26,4 @@ scrape_configs:
     metrics_path: '/actuator/prometheus'
     scrape_interval: 5s
     static_configs:
-    - targets: ['172.23.147.115:8080']
+    - targets: ['172.23.158.236:8080']
